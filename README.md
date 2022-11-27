@@ -2,9 +2,9 @@
 # DL Academy
 ## Django project example
 
-Тут будет размещаться код проекта с уроков.
-Каждый урок будет лежать в своей ветке.
-Актуальная версия в ветке master.
+Тут будет размещаться код проекта с уроков.  
+Каждый урок будет лежать в своей ветке.  
+Актуальная версия в ветке master.  
 
 ### FAQ
 
@@ -54,3 +54,82 @@ python manage.py runserver
 </p>
 </details>
 
+<details><summary>Установка pillow для работы с изображениями</summary>
+<p>
+
+```console
+pip install pillow
+```
+
+</p>
+</details>
+
+<details><summary>Создание миграций</summary>
+<p>
+
+```console
+python manage.py makemigrations
+```
+
+если вдруг django говорит что изменений нет, но вы уверены что есть  
+можно попробовать указать приложение, где должны появиться миграции
+
+```console
+python manage.py makemigrations core
+```
+
+</p>
+</details>
+
+<details><summary>Применение миграций</summary>
+<p>
+
+```console
+python manage.py migrate
+```
+
+можно применить миграции к конкретному приложению
+
+```console
+python manage.py migrate core
+```
+
+не удаляйте миграции вручную, если уже выполнили команду migrate вместе с ними!  
+если сделали изменения в моделях, лучше сделайте ещё одну миграцию  
+
+если вдруг вам очень надо удалить, то..  
+миграции можно удалить только после их отмены в базе  
+для этого нужно применить ту миграцию, которая была ещё норм  
+
+```console
+python manage.py migrate 0001
+```
+
+или отменить вообще все миграции в приложении
+
+```console
+python manage.py migrate core zero
+```
+
+</p>
+</details>
+
+<details><summary>Создание суперпользователя</summary>
+<p>
+
+```console
+python manage.py createsuperuser
+```
+
+!!! не пугайтесь, если при вводе пароля символы в консоли не появляются  
+так и задумано в целях "безопасности"))
+
+если забыли пароль, но помните имя пользователя  
+в консоли пароль можно поменять
+
+```console
+python manage.py changepassword имя_пользователя
+```
+
+</p>
+</details>
