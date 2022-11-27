@@ -121,6 +121,19 @@ python manage.py migrate core zero
 python manage.py createsuperuser
 ```
 
+```console
+Имя пользователя: root
+Адрес электронной почты: 
+Password: 
+Password (again): 
+Введённый пароль слишком похож на имя пользователя.
+Введённый пароль слишком короткий. Он должен содержать как минимум 8 символов.
+Введённый пароль слишком широко распространён.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+```
+
 !!! не пугайтесь, если при вводе пароля символы в консоли не появляются  
 так и задумано в целях "безопасности"))
 
