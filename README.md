@@ -38,10 +38,19 @@ django-admin startproject instagrammik
 <p>
 
 ```console
-python3 manage.py startapp core
+python manage.py startapp core
 ```
 
 </p>
 </details>
 
+<details><summary>Запуск проекта</summary>
+<p>
+
+```console
+python manage.py runserver
+```
+
+</p>
+</details>
 
