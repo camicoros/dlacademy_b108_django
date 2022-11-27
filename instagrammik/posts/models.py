@@ -20,3 +20,10 @@ class Post(models.Model):
     date_pub = models.DateTimeField(auto_now_add=True)
     date_edit = models.DateTimeField(auto_now=True)
     likes = models.ManyToManyField(CustomUser, related_name='users_like_it', blank=True)
+
+    @property
+    def like_count(self):
+        return self.likes.count()
+
+    def __str__(self):
+        return "Post from {} with #{}".format(self.author, self.id)
